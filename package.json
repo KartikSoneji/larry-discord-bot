@@ -26,6 +26,7 @@
         "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write",
         "docs-bot": "ts-node src/docs-bot.ts",
         "mod-bot": "ts-node src/mod-bot.ts",
-        "build": "tsc --build"
+        "gen-errors": "ts-node src/generate-error-map.ts",
+        "build": "yarn gen-errors && tsc --build"
     }
 }
